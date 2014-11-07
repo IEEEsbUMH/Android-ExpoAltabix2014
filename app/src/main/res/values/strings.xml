@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ExpoAltabix2014</string>
-    <string name="hello_world">Hello world!</string>
+    <!--Declarar los items en XML es viable porque el contenido del menú no es dinámico. Si lo
+    fuera, deberíamos declararlos en Java-->
+
+    <string name="app_name">ExpoAltabix 2014</string>
+    <string name="hello_world">Hola Mundo</string>
     <string name="action_settings">Settings</string>
+
+    <!--Lista de los títulos de los items de navegación-->
+
+    <string-array name="titulos">
+
+        <item>Inicio</item>
+        <item>¿Quiénes somos?</item>
+        <item>Grupos de trabajo</item>
+        <item>Eventos</item>
+        <item>Prueba nuestro juego</item>
+        <item>Acerca de</item>
+
+    </string-array>
+
+    <!--Lista de los iconos de los items de navegación-->
+
+    <string-array name="iconos">
+
+        <item>@drawable/ic_action_view_as_list</item>
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_good</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_gamepad</item>
+        <item>@drawable/ic_action_settings</item>
+
+    </string-array>
+
+
 
 </resources>
