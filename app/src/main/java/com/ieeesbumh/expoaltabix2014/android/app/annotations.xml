@@ -1,0 +1,10 @@
+<root>
+    <item name='android.app.Activity android.view.View findViewById(int)'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+    </item>
+    <item name='android.app.Activity void startActivity(android.content.Intent)'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val val="&quot;!null -&gt; true&quot;" />
+        </annotation>
+    </item>
+</root>

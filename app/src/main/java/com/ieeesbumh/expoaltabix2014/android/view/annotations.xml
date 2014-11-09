@@ -1,0 +1,8 @@
+<root>
+    <item name='android.view.View android.view.View findViewById(int)'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+    </item>
+    <item name='android.view.View.OnClickListener'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+    </item>
+</root>
