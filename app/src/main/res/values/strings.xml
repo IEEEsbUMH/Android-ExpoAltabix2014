@@ -15,7 +15,7 @@
         <item>Inicio</item>
         <item>¿Quiénes somos?</item>
         <item>Grupos de trabajo</item>
-        <item>Eventos</item>
+        <item>Contacto</item>
         <item>Prueba nuestro juego</item>
         <item>Acerca de</item>
 
@@ -33,6 +33,18 @@
         <item>@drawable/ic_action_settings</item>
 
     </string-array>
+
+    <!--Strings necesarias para integrar el Layout "Contacto" de Josevi.-->
+    <string name="encabezado">CONTACTO</string>
+    <string name="texto1">Si quieres saber más sobre nosotros, visita nuestras redes sociales.</string>
+    <string name="ramaUMH">IEEE UMH Student Branch</string>
+    <string name="ramaEspaña">IEEE España</string>
+    <string name="enlace1">Web de nuestra rama</string>
+    <string name="enlace2">Síguenos en Twitter</string>
+    <string name="enlace3">Visita nuestro Facebook</string>
+    <string name="enlace4">Web de IEEE España</string>
+    <string name="enlace5">Twitter de IEEE España</string>
+    <string name="enlace6">Facebook de IEEE España</string>
 
 
 
