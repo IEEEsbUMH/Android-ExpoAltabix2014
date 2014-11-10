@@ -7,15 +7,13 @@ import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 /**
  * Created by javierlight on 28/10/14.
  *
  * La Splash Screen es la pantalla que se muestra al iniciar la app, el clásico "Cargando".
  */
-public class splashScreen extends Activity {
+public class SplashScreen extends Activity {
 
     // Constante para especificar la duración de la Splash Screen
     private static final long SPLASH_SCREEN_DELAY = 6000; //tiempo en milisegundos (6000ms=6s)
@@ -27,7 +25,7 @@ public class splashScreen extends Activity {
         setContentView(R.layout.splash_screen); //La vista se asigna a splash_screen.xml
 
         // instanciamos cargando
-        final cargando loading = new cargando();
+        final Cargando loading = new Cargando();
 
         TextView tv = (TextView) findViewById(R.id.textocargando);  // el texto variable
         String text = loading.setFraseCargando(0);  // frase inicial
@@ -68,7 +66,7 @@ public class splashScreen extends Activity {
 
                 // Empieza la siguiente actividad
                 Intent intentPantallaPrincipal = new Intent().setClass(
-                        splashScreen.this, expoAltabix.class); //La clase de la que venimos, la clase a la que vamos.
+                        SplashScreen.this, Main.class); //La clase de la que venimos, la clase a la que vamos.
                 startActivity(intentPantallaPrincipal);
 
                 // Se utiliza finish() para dar fin a la actividad, para que el usuario no pueda volver
@@ -108,7 +106,7 @@ public class splashScreen extends Activity {
         runOnUiThread(new Thread(new Runnable() {
             public void run() {
                 TextView tv = (TextView) findViewById(R.id.textocargando);
-                final cargando loading = new cargando();
+                final Cargando loading = new Cargando();
                 String text = loading.setFraseCargando(i);
                 tv.setText(text);
 //                while (i++ < 1000) {

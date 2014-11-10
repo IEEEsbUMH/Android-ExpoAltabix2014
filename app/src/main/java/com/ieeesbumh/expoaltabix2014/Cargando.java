@@ -6,7 +6,7 @@ import android.provider.AlarmClock;
 /**
  * Created by Q on 06/11/2014.
  */
-public class cargando {
+public class Cargando {
 
     public String fraseCargando = new String("Cargando, pero con calma.."); // inicializada aunque no se usa
     public int tiempoCargando;
