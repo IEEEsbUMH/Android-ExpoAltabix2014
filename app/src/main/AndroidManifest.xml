@@ -9,7 +9,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.ieeesbumh.expoaltabix2014.SplashScreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +19,8 @@
         </activity>
 		<activity
             android:name="com.ieeesbumh.expoaltabix2014.Main"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

@@ -19,8 +19,8 @@ public class Cargando {
             1500,
             1500,
             500,
-            1000,
-            2000
+            1700,
+            1300
             };
 
     public String setFraseCargando(int idFrase) {   //posiblemente redundante
