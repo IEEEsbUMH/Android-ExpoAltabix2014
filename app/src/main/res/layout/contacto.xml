@@ -6,7 +6,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/background3"
     tools:context=".MyActivity"
     android:clickable="true">
 
@@ -14,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_marginTop="90dp">
+        >
 
         <LinearLayout
             android:orientation="vertical"
