@@ -4,12 +4,108 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bienvenido! (pantalla 1)"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="0.4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            android:text="¡Te damos la bienvenida a la app oficial del evento ExpoAltabix 2014!"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.3"
+        android:layout_marginLeft="15dp"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.5"
+            android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+
+            android:src="@drawable/logo"
+            android:scaleType="fitStart"
+            />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.4"
+            android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/android_wee"
+
+            android:scaleType="fitStart"
+            android:id="@+id/imageView2" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.3"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Esta app ha sido desarrollada en menos de una semana por el grupo de aprendizaje Android-Java de la rama del IEEE, aprendiendo desde cero."
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="¡Desliza el dedo para abrir el menú y conocernos un poco mejor!"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView3" />
+
+
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

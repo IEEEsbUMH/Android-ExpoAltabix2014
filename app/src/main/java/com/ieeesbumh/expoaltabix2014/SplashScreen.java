@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class SplashScreen extends Activity {
 
     // Constante para especificar la duración de la Splash Screen
-    private static final long SPLASH_SCREEN_DELAY = 6000; //tiempo en milisegundos (6000ms=6s)
+    private static final long SPLASH_SCREEN_DELAY = 5000; //tiempo en milisegundos (6000ms=6s)
 
 
     @Override

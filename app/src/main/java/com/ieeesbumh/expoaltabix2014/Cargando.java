@@ -1,8 +1,5 @@
 package com.ieeesbumh.expoaltabix2014;
 
-import android.content.Intent;
-import android.provider.AlarmClock;
-
 /**
  * Created by Q on 06/11/2014.
  */
@@ -12,18 +9,18 @@ public class Cargando {
     public int tiempoCargando;
 
     public String[] listaFrases = {
-            "Desencriptando todas sus contraseñas",
-            "Instalando troyano en el dispositivo",
+            "Desencriptando todas tus contraseñas",
+            "Instalando troyano en tu dispositivo",
             "Precalentando el horno",
-            "Añadiendo mucha azúcar",
-            "Esperando por una maldita SplashScreen ofensiva!!"
+            "Añadiendo una cucharada de azúcar",
+            "Solucionando error NullKudoException"
             };
     public int[] listaTiempos = {   //duracion de cada frase de listaFrases
             1500,
             1500,
             500,
             1000,
-            3000
+            2000
             };
 
     public String setFraseCargando(int idFrase) {   //posiblemente redundante

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 15
     buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.ieeesbumh.expoaltabix2014"
         minSdkVersion 13
-        targetSdkVersion 21
+        targetSdkVersion 15
 
     }
     buildTypes {
