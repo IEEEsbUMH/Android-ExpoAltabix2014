@@ -1,16 +1,13 @@
 package com.ieeesbumh.expoaltabix2014;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 /**
  * Created by kudo on 11/11/14.
@@ -37,7 +34,13 @@ public class Fragment_Grupos_Trabajo extends Fragment {
         final int[] layoutGrupos = {
                 R.layout.android_y_java,
                 R.layout.impresion_3d,
-                R.layout.videojuegos
+                R.layout.videojuegos,
+                R.layout.comunicacion,
+                R.layout.robotica_y_arduino,
+                R.layout.seguridad_informatica,
+                R.layout.aeromodelismo,
+                R.layout.wie
+
 //                , R.layout.comunicacion //  demás grupos etc
         };
 
