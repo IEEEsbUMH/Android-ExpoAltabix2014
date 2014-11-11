@@ -55,16 +55,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
 
-<!--
-            <ImageView
+     <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView"
                 android:background="@drawable/videojuegos"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="40dp"></ImageView>
--->
+                android:layout_centerHorizontal="true"
+                ></ImageView>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,9 +79,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="– Promover el trabajo en equipo y la coordinación del mismo.
-– Aprender acerca de herramientas informáticas de coordinación y de control de versiones.
-– Desarrollar una filosofía referente al desarrollo de juegos gratuitos de cara a el usuario final.
+                android:text="– Promover el trabajo en equipo y la coordinación del mismo.\n
+– Aprender acerca de herramientas informáticas de coordinación y de control de versiones.\n
+– Desarrollar una filosofía referente al desarrollo de juegos gratuitos de cara a el usuario final.\n
 – Investigar las responsabilidades y funciones de un estudio de desarrollo de videojuegos."
                 android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal"
