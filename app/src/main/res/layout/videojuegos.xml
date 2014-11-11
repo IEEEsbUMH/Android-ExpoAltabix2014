@@ -7,6 +7,33 @@
     android:background="@drawable/background2"
     android:longClickable="true">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_atras"
+            android:layout_toLeftOf="@+id/boton_medio"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_medio"
+            android:visibility="invisible"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_toRightOf="@+id/boton_medio"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_adelante"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_next_item"/>
+
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +55,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
 
+<!--
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,6 +64,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="40dp"></ImageView>
+-->
 
             <TextView
                 android:layout_width="wrap_content"
