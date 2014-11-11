@@ -64,7 +64,7 @@
 
     <string name="queHacemosaero">\nSomos... \n\n    Un grupo de investigación y desarrollo de aplicaciónes para la solución de problemas o mejora de las soluciones actules a través de aeronaves no tripuladas.\n</string>
     <string name="descripcionaero">Porque... \n\n    En la actualidad el mercado de los drones está en plena expansión. Actualmente hay multitud de tareas que se realizan por medio de aviones o helicópteros tripulados, que ocasionan altos costes, siendo a veces desproporcionados con la taréa que realmente están desempeñando. Un claro ejemplo es la fotografía aérea, la cual desde hace unos años en incontables ocasiones se ha cambiado un helicoptero tripulado, por un dron, realizando así la mísma tarea a un coste muy inferior.
-Es por ello que esta agrupación estudia y desarrolla ideas para abarcar nuevos campos o mejorar las soluciones adoptadas actualmente por las naves no tripuladas, así como el tipo de dron adecuado para cada una de ellas.</string>
+\n\n Es por ello que esta agrupación estudia y desarrolla ideas para abarcar nuevos campos o mejorar las soluciones adoptadas actualmente por las naves no tripuladas, así como el tipo de dron adecuado para cada una de ellas.</string>
 
     <string name="titulocomu">COMUNICACIÓN</string>
     <string name="queHacemoscomu">Este grupo de trabajo se plantea como medio de divulgación de la Rama IEEESB UMH. El objetivo principal de este grupo es actualizar la página web, así como corregir sus errores.\n\n
@@ -72,6 +72,17 @@ Por otra parte, referente a la comunicación llevamos a las redes sociales la ra
     <string name="descripcioncomu">Como segunda sección dentro del grupo, se pretende que entre todo el equipo de desarrolladores nos ayudemos mutuamente a incentivar y hacer realidad todos los proyectos que tengamos en mente, como creación de vídeos promocionales de la rama, carteles para eventos, merchandinsing, y todo el material necesario para eventos.</string>
 
 
+    <!--Empiezan las strings del layout Quiénes somos [JOSEVI]-->
+    <string name="encabezado2"><b><k>Quiénes somos</k></b></string>
+    <string name="titulo1"><b>¿Qué es el IEEE?</b></string>
+    <string name="titulo2">Región 8 de IEEE</string>
+    <string name="titulo3">IEEE España</string>
+    <string name="titulo4"><b>¿Y qué es la IEEE UMH SB?</b></string>
+    <string name="textoQS1">IEEE son las siglas del <b>Institute of Electrical and Electronic Engineers</b>, una organización técnica y profesional de ámbito mundial dedicada a dar soporte a la teoría y aplicaciones de la ingeniería eléctrica, electrónica y de la informática.
 
+        \n\nDesde su fundación en 1884, el IEEE se ha expandido por más de 150 países y ha alcanzado un número de asociados de más de 320.000, de los cuales 50.000 son estudiantes, agrupando ingenieros, informáticos, físicos y matemáticos.\n\nLa Sección Española del IEEE pertenece a la Región 8 de entre las 10 en que se divide el organismo, región que comprende Europa, África y Oriente Medio.</string> <!--textoQS:=texto Quienes Somos-->
+    <string name="textoQS2">Fue constituida oficialmente en 1967 y en la actualidad cuenta con más de 3700 miembros en nuestro país.</string>
+    <string name="textoQS3">Somos un grupo de estudiantes de ingeniería de la EPSE (Escuela Politécnica Superior de Elche), con el propósito de difundir y conectar las nuevas tecnologías con las y los estudiantes de la Universidad Miguel Hernández de Elche (UMH).</string>
+    <string name="textoQS4">Tenemos ilusión por enseñar y aprender, por crear y por investigar, profundizando en todos los campos tecnológicos que están a nuestro alcance.\n\nCon este objetivo creamos la Rama de Estudiantes de IEEE de la UMH en mayo de 2012.\n\nComo reconocimiento a nuestro esfuerzo a lo largo de este tiempo, el pasado 31 de octubre de 2014 recibimos el Premio a la mejor rama de estudiantes del IEEE de la sección España. Todo un honor que nos anima a seguir adelante.</string>
 
 </resources>

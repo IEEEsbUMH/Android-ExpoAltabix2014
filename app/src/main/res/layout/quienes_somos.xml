@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¿Quiénes somos? (Pantalla 2)"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/encabezado2"
+                android:textStyle="bold"
+                android:id="@+id/textView"
+                android:textSize="30sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/ieee_tbbt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/titulo1"
+                android:id="@+id/textView2"
+                android:layout_marginBottom="15dp"
+                android:textSize="22sp"
+                android:textStyle="normal|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="IEEE son las siglas del Institute of Electrical and Electronic Engineers, una organización técnica y profesional de ámbito mundial dedicada a dar soporte a la teoría y aplicaciones de la ingeniería eléctrica, electrónica y de la informática.
+                \n\n Desde su fundación en 1884, el IEEE se ha expandido por más de 150 países y ha alcanzado un número de asociados de más de 320.000, de los cuales 50.000 son estudiantes, agrupando ingenieros, informáticos, físicos y matemáticos.\n\nLa Sección Española del IEEE pertenece a la Región 8 de entre las 10 en que se divide el organismo, región que comprende Europa, África y Oriente Medio."
+                android:id="@+id/textView3"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/imageView2"
+                android:src="@drawable/regiones" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/textoQS2"
+                android:id="@+id/textView4"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:src="@drawable/logo_ieee_spain"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/titulo4"
+                android:id="@+id/textView5"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="30dp"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/textoQS3"
+                android:id="@+id/textView6"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@drawable/foto_dd"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/textoQS4"
+                android:id="@+id/textView7"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@drawable/foto_premio"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
