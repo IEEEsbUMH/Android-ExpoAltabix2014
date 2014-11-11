@@ -12,11 +12,12 @@ import java.util.TimerTask;
  * Created by javierlight on 28/10/14.
  *
  * La Splash Screen es la pantalla que se muestra al iniciar la app, el clásico "Cargando".
+ * Modificado por kudo para incluir un texto dinámico con distintos mensajes de "loading".
  */
 public class SplashScreen extends Activity {
 
     // Constante para especificar la duración de la Splash Screen
-    private static final long SPLASH_SCREEN_DELAY = 5000; //tiempo en milisegundos (6000ms=6s)
+    private static final long SPLASH_SCREEN_DELAY = 2000; //tiempo en milisegundos (6000ms=6s)
 
 
     @Override
@@ -77,8 +78,9 @@ public class SplashScreen extends Activity {
 
 
         // Creamos array de tiempos de duracion de cada frase
-        int[] triggerTime = new int[loading.listaTiempos.length]; // array de tiempos
+        int[] triggerTime = new int[loading.listaTiempos.length]; // preparamos array de tiempos
 
+        // cada tiempo indicará el momento del trigger para cada task
         triggerTime[0] = loading.listaTiempos[0];     //el primer tiempo lo añadimos fuera del for
         for (int i = 1; i < triggerTime.length; i++) {
             triggerTime[i] = triggerTime[i-1] + loading.listaTiempos[i];
@@ -94,9 +96,9 @@ public class SplashScreen extends Activity {
         timer.schedule(taskambiaolafrase4, triggerTime[3]);
 
 
-//        timer.schedule(task,SPLASH_SCREEN_DELAY);
-        timer.schedule(task,triggerTime[triggerTime.length-1]);
-
+        // Termina cuando acaban todos los mensajes de loading
+//        timer.schedule(task,triggerTime[triggerTime.length-1]);
+        timer.schedule(task,SPLASH_SCREEN_DELAY);
 
     }
 

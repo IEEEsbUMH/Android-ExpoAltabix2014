@@ -1,7 +1,7 @@
 package com.ieeesbumh.expoaltabix2014;
 
 /**
- * Created by Q on 06/11/2014.
+ * Created by kudo on 06/11/2014.
  */
 public class Cargando {
 
