@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_atras"
+            android:layout_toLeftOf="@+id/boton_medio"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_medio"
+            android:visibility="invisible"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_toRightOf="@+id/boton_medio"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_adelante"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_next_item"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="IMPRESIÓN 3D"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:background="@drawable/impresora"
+
+
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="La impresión 3D es una tecnología que apareció hace relativamente poco y ha supuesto una revolución en las mentes de muchos visionarios que ya se han lanzado a experimentar con ellas. Se ha abierto un nuevo modelo de mercado donde superficies no tan grandes encuentran la posibilidad de producir a bajo coste cuando antes eran necesarias fábricas enteras. \n\nDesde sencillas piezas de plástico de fabricación sencilla hasta órganos vivos, pasando por pedazos de tráquea, comida, circuitos eléctricos sobre papel, implantes biónicos, o piezas metálicas. Con la impresión 3D parece que la imaginación es el límite."
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/imageView"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Desde el IEEE también queremos introducirnos en este mundo y empezar a desarrollar nuestra capacidad como ingenieros en un campo todavía por explotar. Ya tenemos construído nuestro primer modelo de prusa i3 con el que hemos podido iniciarnos en la tecnología.\n\n ¿Hemos terminado? Ni por asomo: No hemos hecho más que empezar. ¡Échale un vistazo a nuestros proyectos!"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="40dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

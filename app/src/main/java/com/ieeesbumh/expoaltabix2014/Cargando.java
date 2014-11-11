@@ -1,7 +1,7 @@
 package com.ieeesbumh.expoaltabix2014;
 
 /**
- * Created by Q on 06/11/2014.
+ * Created by kudo on 06/11/2014.
  */
 public class Cargando {
 
@@ -18,9 +18,9 @@ public class Cargando {
     public int[] listaTiempos = {   //duracion de cada frase de listaFrases
             1500,
             1500,
-            500,
-            1000,
-            2000
+            800,
+            1300,
+            1700
             };
 
     public String setFraseCargando(int idFrase) {   //posiblemente redundante
