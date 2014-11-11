@@ -38,13 +38,39 @@
     <string name="encabezado">CONTACTO</string>
     <string name="texto1">Si quieres saber más sobre nosotros, visita nuestras redes sociales.</string>
     <string name="ramaUMH">IEEE UMH Student Branch</string>
-    <string name="ramaEspaña">IEEE España</string>
+    <string name="seccionEspaña">IEEE Sección España</string>
     <string name="enlace1">Web de nuestra rama</string>
     <string name="enlace2">Síguenos en Twitter</string>
     <string name="enlace3">Visita nuestro Facebook</string>
     <string name="enlace4">Web de IEEE España</string>
     <string name="enlace5">Twitter de IEEE España</string>
     <string name="enlace6">Facebook de IEEE España</string>
+
+
+<!--    <string-array name="grupos">
+
+    &lt;!&ndash;Lista de layouts para cargar cada grupo desde un único fragment [kudo]&ndash;&gt;
+    <item>android_y_java</item>
+    <item>impresion_3d</item>
+    <item>videojuegos</item> -->
+
+<!--    <string-array name="namegrupos">
+
+    <string name="android">android_y_java</item>
+    <string name="impresora">impresion_3d</item>
+    <string name="games">videojuegos</item>-->
+
+    <!--Strings para layouts comu y aero (Carlos Belso)-->
+
+    <string name="queHacemosaero">\nSomos... \n\n    Un grupo de investigación y desarrollo de aplicaciónes para la solución de problemas o mejora de las soluciones actules a través de aeronaves no tripuladas.\n</string>
+    <string name="descripcionaero">Porque... \n\n    En la actualidad el mercado de los drones está en plena expansión. Actualmente hay multitud de tareas que se realizan por medio de aviones o helicópteros tripulados, que ocasionan altos costes, siendo a veces desproporcionados con la taréa que realmente están desempeñando. Un claro ejemplo es la fotografía aérea, la cual desde hace unos años en incontables ocasiones se ha cambiado un helicoptero tripulado, por un dron, realizando así la mísma tarea a un coste muy inferior.
+Es por ello que esta agrupación estudia y desarrolla ideas para abarcar nuevos campos o mejorar las soluciones adoptadas actualmente por las naves no tripuladas, así como el tipo de dron adecuado para cada una de ellas.</string>
+
+    <string name="titulocomu">COMUNICACIÓN</string>
+    <string name="queHacemoscomu">Este grupo de trabajo se plantea como medio de divulgación de la Rama IEEESB UMH. El objetivo principal de este grupo es actualizar la página web, así como corregir sus errores.\n\n
+Por otra parte, referente a la comunicación llevamos a las redes sociales la rama. Desde aquí publicamos en twitter, facebook, y distintos grupos de redes sociales para dar a conocer nuestra rama a los estudiantes de la Universidad Miguel Hernandez de Elche.\n</string>
+    <string name="descripcioncomu">Como segunda sección dentro del grupo, se pretende que entre todo el equipo de desarrolladores nos ayudemos mutuamente a incentivar y hacer realidad todos los proyectos que tengamos en mente, como creación de vídeos promocionales de la rama, carteles para eventos, merchandinsing, y todo el material necesario para eventos.</string>
+
 
 
 

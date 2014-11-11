@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_atras"
+            android:layout_toLeftOf="@+id/boton_medio"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/boton_medio"
+            android:visibility="invisible"
+            android:src="@drawable/ic_action_previous_item"/>
+        <ImageButton
+            android:layout_toRightOf="@+id/boton_medio"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_adelante"
+            android:src="@drawable/ic_action_next_item"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AEROMODELISMO"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="30dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aeroimagen"
+                android:src="@drawable/aeroimagen"
+                android:layout_centerHorizontal="true" />
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/textView2"
+                android:text="@string/queHacemosaero"
+                android:layout_below="@+id/aeroimagen"
+                android:textAppearance="?android:attr/textAppearanceMedium" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:layout_marginRight="40dp" android:layout_marginLeft="40dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/textView3"
+                android:text="@string/descripcionaero"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_below="@+id/textView2"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
