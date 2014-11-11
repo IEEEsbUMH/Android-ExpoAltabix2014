@@ -40,8 +40,6 @@ public class Fragment_Grupos_Trabajo extends Fragment {
                 R.layout.seguridad_informatica,
                 R.layout.aeromodelismo,
                 R.layout.wie
-
-//                , R.layout.comunicacion //  demás grupos etc
         };
 
 /*        switch (idGrupoActual) {

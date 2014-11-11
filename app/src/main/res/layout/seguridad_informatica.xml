@@ -38,7 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ANDROID Y JAVA"
+        android:text="SEGURIDAD INFORMÁTICA"
+        android:textStyle="bold"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
@@ -54,34 +55,39 @@
 
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:src="@drawable/seguridad_infor_imagen"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/imageView"
-                android:background="@drawable/android_foto"
-                android:layout_centerHorizontal="true" />
-
+                android:layout_centerHorizontal="true"/>
 
             <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Este grupo de trabajo se plantea como medio de iniciación para los curiosos que quieran desarrollar en Android y Java y como herramienta para la cooperación y el asesoramiento de los proyectos personales sobre esta plataforma."
-                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_below="@+id/imageView"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:text="Este grupo de trabajo tiene como objetivo principal el desarrollo de aplicaciones y utilidades que exploten vulnerabilidades de un sistema para dar un mayor rendimiento de estos y la búsqueda de usos alternativos para el “buen uso”. Para ello habrá que estudiar los ataques de seguridad más realizados y los consejos y protocolos para disminuir los riesgos de infección y vulnerabilidades.
+"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Como segunda sección dentro del grupo, se pretende que entre todo el equipo de desarrolladores nos ayudemos mutuamente a incentivar y hacer realidad todos los proyectos que tengamos en mente, como aplicaciones o juegos que personalmente cada uno quiera realizar."
-                android:id="@+id/textView3"
-                android:layout_below="@+id/textView2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="40dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imageView"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/textView3"
+                android:text="Como segunda sección dentro del grupo,se prentende llegar a la comprenión plena sobre la seguridad nformática y realizar un proyecto mediante la ayuda de lo iembroos del grupo. "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_below="@+id/textView2"/>
+
+
 
         </RelativeLayout>
     </ScrollView>

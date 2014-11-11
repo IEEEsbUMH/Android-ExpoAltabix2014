@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Desde el grupo de Desarrollo de Videojuegos se pretende aprender a manejar y generar los elementos que componen los videojuegos, explorar diferentes motores de desarrollo para diferentes plataformas y diferenciar las ventajas y desventajas de cada uno, iniciar a los miembros en la programación orientada a objetos de una forma gráfica y profundizar en el concepto de videojuego explotando la libertad que este concepto contiene."
+                android:text="Desde el grupo de Desarrollo de Videojuegos se pretende aprender a manejar y generar los elementos que componen los videojuegos, explorar diferentes motores de desarrollo para diferentes plataformas y diferenciar las ventajas y desventajas de cada uno.\n\n Además, se pretende iniciar a los miembros en la programación orientada a objetos de una forma gráfica y profundizar en el concepto de videojuego explotando la libertad que este concepto contiene."
                 android:id="@+id/textView2"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
@@ -88,6 +88,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/textView2"
+                android:layout_marginBottom="80dp"
                 android:layout_marginLeft="40dp"/>
 
         </RelativeLayout>
