@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,11 +29,16 @@ public class SplashScreen extends Activity {
         // instanciamos cargando
         final Cargando loading = new Cargando();
 
+        // Elegimos una frase aleatoria cada vez que iniciamos
+        Random rnd = new Random();
+        int randNum = rnd.nextInt(loading.listaFrases.length);
+
         TextView tv = (TextView) findViewById(R.id.textocargando);  // el texto variable
-        String text = loading.setFraseCargando(0);  // frase inicial
+        String text = loading.setFraseCargando(randNum);  // frase inicial
         tv.setText(text);
 
-        // <--- func mis timertask aqui
+
+/*        // Todas las task para varios cambios de frase consecutivos
         TimerTask taskambiaolafrase1 = new TimerTask() { //Creación de un objeto TimerTask
             @Override
             public void run() {
@@ -56,7 +62,7 @@ public class SplashScreen extends Activity {
             public void run() {
                 runThread(4);
             }
-        };
+        };*/
 
 
 
@@ -77,28 +83,31 @@ public class SplashScreen extends Activity {
         };
 
 
-        // Creamos array de tiempos de duracion de cada frase
+         // CAPADO POR NECESIDAD VITAL xD [kudo]
+/*        // Creamos array de tiempos de duracion de cada frase
         int[] triggerTime = new int[loading.listaTiempos.length]; // preparamos array de tiempos
 
         // cada tiempo indicará el momento del trigger para cada task
         triggerTime[0] = loading.listaTiempos[0];     //el primer tiempo lo añadimos fuera del for
         for (int i = 1; i < triggerTime.length; i++) {
             triggerTime[i] = triggerTime[i-1] + loading.listaTiempos[i];
-        }
+        }*/
 
 
         // INICIAMOS TIMER
         Timer timer = new Timer();
 
+/*        // Todas las frases cada vez era innecesario... pero lo dejo por si acaso!
         timer.schedule(taskambiaolafrase1, triggerTime[0]);
         timer.schedule(taskambiaolafrase2, triggerTime[1]);
         timer.schedule(taskambiaolafrase3, triggerTime[2]);
-        timer.schedule(taskambiaolafrase4, triggerTime[3]);
+        timer.schedule(taskambiaolafrase4, triggerTime[3]);*/
 
+        timer.schedule(task, loading.listaTiempos[randNum]);
 
         // Termina cuando acaban todos los mensajes de loading
 //        timer.schedule(task,triggerTime[triggerTime.length-1]);
-        timer.schedule(task,SPLASH_SCREEN_DELAY);
+//        timer.schedule(task,SPLASH_SCREEN_DELAY);
 
     }
 
@@ -111,14 +120,7 @@ public class SplashScreen extends Activity {
                 final Cargando loading = new Cargando();
                 String text = loading.setFraseCargando(i);
                 tv.setText(text);
-//                while (i++ < 1000) {
-//                    btn.setText("#" + i);
-//                    try {
-//                        Thread.sleep(300);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
+
             }
         }));
     }
