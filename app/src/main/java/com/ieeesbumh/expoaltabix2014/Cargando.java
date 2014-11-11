@@ -18,9 +18,9 @@ public class Cargando {
     public int[] listaTiempos = {   //duracion de cada frase de listaFrases
             1500,
             1500,
-            500,
-            1700,
-            1300
+            800,
+            1300,
+            1700
             };
 
     public String setFraseCargando(int idFrase) {   //posiblemente redundante
