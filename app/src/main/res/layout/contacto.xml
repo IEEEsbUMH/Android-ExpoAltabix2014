@@ -7,21 +7,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MyActivity"
+    android:background="@drawable/background1"
     android:clickable="true">
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
+
         >
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
+            android:layout_marginTop="50dp"
             android:layout_height="fill_parent">
 
             <TextView
                 android:text="@string/encabezado"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
@@ -45,6 +49,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/ramaUMH"
                 android:id="@+id/textView3"
+                android:textStyle="bold"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="22dp" />
 
@@ -173,7 +178,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/ramaEspaña"
+                android:text="@string/seccionEspaña"
+                android:textStyle="bold"
                 android:id="@+id/textView4"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="15dp" />
@@ -291,7 +297,8 @@
                             android:text="@string/enlace6"
                             android:id="@+id/button6"
                             android:background="#00ffffff"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:layout_marginBottom="30dp"/>
                     </LinearLayout>
                 </LinearLayout>
 

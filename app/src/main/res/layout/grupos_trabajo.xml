@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Grupos de trabajo (pantalla 3)"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+    <!--Esqueleto de la interfaz de usuario-->
+
+
+    <!--El FrameLayout será el contenedor principal. Este contenedor
+    permitira deslizar la vista-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/reemplazar_frame"
+        android:background="#ffffff"
+        tools:context=".Main"/>
+
+</RelativeLayout>
