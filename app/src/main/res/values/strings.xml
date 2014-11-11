@@ -47,5 +47,17 @@
     <string name="enlace6">Facebook de IEEE España</string>
 
 
+<!--    <string-array name="grupos">
+
+    &lt;!&ndash;Lista de layouts para cargar cada grupo desde un único fragment [kudo]&ndash;&gt;
+    <item>android_y_java</item>
+    <item>impresion_3d</item>
+    <item>videojuegos</item> -->
+
+<!--    <string-array name="namegrupos">
+
+    <string name="android">android_y_java</item>
+    <string name="impresora">impresion_3d</item>
+    <string name="games">videojuegos</item>-->
 
 </resources>

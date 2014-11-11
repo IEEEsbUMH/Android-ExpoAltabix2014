@@ -60,7 +60,7 @@ public class Main extends Activity {
 
         //Agregamos objetos con la clase Item_object al array
 
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<6; i++) {
             NavegadorItems.add(new Item_Object(titulos[i], NavegadorIconos.getResourceId(i, -1)));
         }
 
@@ -123,7 +123,11 @@ public class Main extends Activity {
                 fragment = new Fragment_Quienes_Somos();
                 break;
             case 3:
+                // Esta estructura es necesaria para iniciar el fragment adecuado
+                Bundle args = new Bundle();
+                args.putInt("idGrupo",0);       // En este caso, el grupo Android
                 fragment = new Fragment_Grupos_Trabajo();
+                fragment.setArguments(args);
                 break;
             case 4:
                 fragment = new Fragment_Contacto();
