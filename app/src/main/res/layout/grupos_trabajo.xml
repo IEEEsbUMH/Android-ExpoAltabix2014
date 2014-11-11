@@ -1,119 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Esqueleto de la interfaz de usuario-->
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background2"
-    >
+    <!--El FrameLayout será el contenedor principal. Este contenedor
+    permitira deslizar la vista-->
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        >
-
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="@drawable/ic_action_previous_item"
-            android:scaleType="fitCenter"
-            android:layout_gravity="center"/>
-
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_gravity="center_horizontal"
-        >
+        android:layout_height="match_parent"
+        android:id="@+id/reemplazar_frame"
+        android:background="#ffffff"
+        tools:context=".Main"/>
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/horizontalScrollView"
-        android:layout_marginBottom="30dp"
-        android:layout_gravity="center_horizontal"
-        >
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                >
-
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="ANDROID Y JAVA"
-                    android:id="@+id/textView"
-                    android:layout_gravity="center_horizontal"/>
-
-                    <RelativeLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent">
-                        <ImageView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/imageView"
-                            android:src="@drawable/android_foto"
-                            android:layout_centerHorizontal="true"/>
-                        <TextView android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium" android:text="Este grupo de trabajo se plantea como medio de iniciación para los curiosos que quieran desarrollar en Android y Java y como herramienta para la cooperación y el asesoramiento de los proyectos personales sobre esta plataforma."
-                            android:id="@+id/textView2"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_below="@+id/imageView"
-                            />
-                        <TextView android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Como segunda sección dentro del grupo, se pretende que entre todo el equipo de desarrolladores nos ayudemos mutuamente a incentivar y hacer realidad todos los proyectos que tengamos en mente, como aplicaciones o juegos que personalmente cada uno quiera realizar."
-                            android:id="@+id/textView3"
-                            android:layout_below="@+id/textView2"
-                            />
-                    </RelativeLayout>
-            </LinearLayout>
-            </LinearLayout>
-
-    </ScrollView>
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent" >
-
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="@drawable/ic_action_next_item"
-            android:scaleType="fitCenter"
-            />
-
-
-    </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
-
+</RelativeLayout>
