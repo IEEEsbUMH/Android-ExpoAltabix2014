@@ -90,7 +90,6 @@ public class juego extends Activity {
             final Button exit = (Button)rootView.findViewById(R.id.button2);
             final TextView textScore= (TextView)rootView.findViewById(R.id.puntuacion);
 
-            //textScore.setText((int)score);
 
             retry.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -108,6 +107,7 @@ public class juego extends Activity {
                 public void onClick(View v) {
                     android.os.Process.killProcess(android.os.Process.myPid());
                     System.exit(1);
+
                 }
             });
 
