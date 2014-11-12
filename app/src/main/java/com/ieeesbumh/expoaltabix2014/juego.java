@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class juego extends Activity {
 
     TextView tiempo;
     int h=0,m=0,s=0;
+    long variableScoreAlmacen=0;
 
 
     @Override
@@ -73,6 +75,45 @@ public class juego extends Activity {
 
     }
 
+    public static class Ganador extends Fragment{
+        View v;
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState){
+
+
+            final View rootView = inflater.inflate(R.layout.win, container, false);
+            v=rootView;
+
+            final Button retry = (Button)rootView.findViewById(R.id.button);
+            final Button exit = (Button)rootView.findViewById(R.id.button2);
+            final TextView textScore= (TextView)rootView.findViewById(R.id.puntuacion);
+
+            retry.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    Botones hello = new Botones();
+                    fragmentTransaction.replace(R.id.juego, hello);
+                    fragmentTransaction.commit();
+                }
+            });
+
+            exit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }
+            });
+
+            return rootView;
+        }
+
+    }
+
 
     public static class Botones extends Fragment{
 
@@ -87,6 +128,18 @@ public class juego extends Activity {
             Salida hello = new Salida();
             fragmentTransaction.replace(R.id.juego,hello);
             fragmentTransaction.commit();
+
+        }
+
+        public void ganador(){
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            Ganador hello = new Ganador();
+            fragmentTransaction.replace(R.id.juego,hello);
+            fragmentTransaction.commit();
+
+
+
         }
 
         @Override
@@ -105,6 +158,8 @@ public class juego extends Activity {
             final Button button6 = (Button)rootView.findViewById(R.id.button6);
             final Button button7 = (Button)rootView.findViewById(R.id.button7);
             final Button button8 = (Button)rootView.findViewById(R.id.button8);
+            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+
 
             hacerOrden();
             Random rand = new Random();
@@ -113,6 +168,7 @@ public class juego extends Activity {
             int cont=0;
 
             while(cont < 8){
+
                 if(randomNum == 1 && !uno){
                     if(cont == 0){
                         button.setText(Integer.toString(randomNum));
@@ -348,9 +404,12 @@ public class juego extends Activity {
                         button.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
-                            salir();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                            //scoreText.setText("lo has conseguidoooo");
+                            ganador();
                         }
                     }
                     else {
@@ -367,9 +426,10 @@ public class juego extends Activity {
                         button2.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
-                            salir();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+                              ganador();
                         }
                     }
                     else {
@@ -385,9 +445,12 @@ public class juego extends Activity {
                         button3.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
-                            salir();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                           // scoreText.setText("lo has conseguidoooo");
+                            ganador();
                         }
                     }
                     else {
@@ -403,8 +466,11 @@ public class juego extends Activity {
                         button4.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                            //scoreText.setText("lo has conseguidoooo");
                             salir();
                         }
                     }
@@ -421,8 +487,11 @@ public class juego extends Activity {
                         button5.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+
+                           // scoreText.setText("lo has conseguidoooo");
                             salir();
                         }
                     }
@@ -438,10 +507,12 @@ public class juego extends Activity {
                         button6.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
-                            salir();
-                            myChronometer.stop();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                          //  scoreText.setText("lo has conseguidoooo");
+                            ganador();
                         }
                     }
                     else {
@@ -456,9 +527,12 @@ public class juego extends Activity {
                         button7.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
                             myChronometer.stop();
-                            salir();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                           // scoreText.setText("lo has conseguidoooo");
+
+                            ganador();
                         }
                     }
                     else {
@@ -473,9 +547,11 @@ public class juego extends Activity {
                         button8.setVisibility(View.INVISIBLE);
                         turno++;
                         if(turno == 8){
-                            Toast.makeText(v.getContext(),"Conseguido",Toast.LENGTH_LONG).show();
-
-                            salir();
+                            myChronometer.stop();
+                            long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+                          //  scoreText.setText("lo has conseguidoooo");
+                            ganador();
                         }
                     }
                     else {
