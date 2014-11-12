@@ -28,10 +28,11 @@
         </activity>
 
         <activity android:name=".juego"
+            android:screenOrientation="portrait"
             android:label="juego">
         <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.LAUNCHER"/>
+        <action android:name="android.intent.action.JUEGO"/>
+            <category android:name="android.intent.category.PLAY"/>
         </intent-filter>
         </activity>
     </application>

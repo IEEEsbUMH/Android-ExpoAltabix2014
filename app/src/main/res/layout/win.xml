@@ -17,9 +17,23 @@
            android:layout_marginTop="50dp"
             android:layout_marginLeft="20dp"
             android:gravity="center"
+            android:layout_weight="0.5"
             android:layout_marginRight="20dp"
 
-            android:text="¡Más suerte la próxima vez!\n"/>
+            android:text="¡Enhorabuena! Tu puntuación es:\n"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/AppTheme"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:text="@+id/puntuacion"
+            android:layout_weight="0.5"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
