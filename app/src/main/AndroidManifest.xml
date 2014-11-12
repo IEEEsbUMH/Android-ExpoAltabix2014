@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--versionCode es un entero que se compara con el anterior. Si es superior, será una versión nueva
+versionName es String, puede contener lo que queramos-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ieeesbumh.expoaltabix2014"
     android:versionCode="3"
