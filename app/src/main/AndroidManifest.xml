@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ieeesbumh.expoaltabix2014" >
+    package="com.ieeesbumh.expoaltabix2014"
+    android:versionCode="1"
+    android:versionName="1.0.1">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!--Se ha forzado la vista en modo vertical con android:screenOrientation="portrait"
+         en todas las activities, para que no se descuadren los layouts.-->
         <activity
             android:name="com.ieeesbumh.expoaltabix2014.SplashScreen"
             android:label="@string/app_name"
@@ -21,6 +25,15 @@
             android:name="com.ieeesbumh.expoaltabix2014.Main"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".juego"
+            android:screenOrientation="portrait"
+            android:label="juego">
+        <intent-filter>
+        <action android:name="android.intent.action.JUEGO"/>
+            <category android:name="android.intent.category.PLAY"/>
+        </intent-filter>
         </activity>
     </application>
 

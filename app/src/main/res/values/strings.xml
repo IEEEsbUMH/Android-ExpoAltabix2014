@@ -85,4 +85,30 @@ Por otra parte, referente a la comunicación llevamos a las redes sociales la ra
     <string name="textoQS3">Somos un grupo de estudiantes de ingeniería de la EPSE (Escuela Politécnica Superior de Elche), con el propósito de difundir y conectar las nuevas tecnologías con las y los estudiantes de la Universidad Miguel Hernández de Elche (UMH).</string>
     <string name="textoQS4">Tenemos ilusión por enseñar y aprender, por crear y por investigar, profundizando en todos los campos tecnológicos que están a nuestro alcance.\n\nCon este objetivo creamos la Rama de Estudiantes de IEEE de la UMH en mayo de 2012.\n\nComo reconocimiento a nuestro esfuerzo a lo largo de este tiempo, el pasado 31 de octubre de 2014 recibimos el Premio a la mejor rama de estudiantes del IEEE de la sección España. Todo un honor que nos anima a seguir adelante.</string>
 
+
+    <!--Empiezan las strings del layout Acerca de-->
+    <string name="encabezado3"><b><k>Acerca de</k></b></string>
+    <string name="textoAD">¿Qué mérito tiene este proyecto? Hemos conseguido crear una aplicación android desde 0, aprendiendo de forma autodidacta y trabajando en equipo para conseguir equilibrar la falta de conocimientos con esfuerzo e ilusión. \n\nEste es el grupo de creadores de la app:</string>
+
+    <string name="nombre1">Javier Andrés \'Light\'</string>
+    <string name="frase1">Podemos usar DropBox para \n control de versiones\n</string>
+
+
+    <string name="nombre2">Alba Guerra</string>
+    <string name="frase2">Creadora de contenidos no visibles por\n destrucción.\n</string>
+
+    <string name="nombre3">Kudo</string>
+    <string name="frase3">¿Sabéis que esta semana he visto amanecer 2 veces\nentre archivos java?\n</string>
+
+    <string name="nombre4">José Vicente García</string>
+    <string name="frase4">¿Qué he tocado ahora?\n\n</string>
+
+    <string name="nombre5">Vicente Pina</string>
+    <string name="frase5">¿Cuándo descubrirán que esto es un virus?\n</string>
+
+    <string name="nombre6">Irene Campos</string>
+    <string name="frase6">Javi, esto me da PichonaException\n\n</string>
+
+    <string name="nombre7">Carlos Belso</string>
+    <string name="frase7">Al final los layouts no pudieron conmigo.\n</string>
 </resources>
