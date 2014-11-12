@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ieeesbumh.expoaltabix2014"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionCode="2"
+    android:versionName="1.0.2">
 
     <application
         android:allowBackup="true"
@@ -29,7 +29,7 @@
 
         <activity android:name=".juego"
             android:screenOrientation="portrait"
-            android:label="juego">
+            android:label="Juego ExpoAltabix">
         <intent-filter>
         <action android:name="android.intent.action.JUEGO"/>
             <category android:name="android.intent.category.PLAY"/>
