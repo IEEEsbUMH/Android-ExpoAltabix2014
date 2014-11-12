@@ -83,11 +83,11 @@
                         android:layout_marginLeft="10dp">
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace1"
                             android:id="@+id/button1"
-                            android:background="#00ffffff"
+                            android:background="#ddd"
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"/>
                     </LinearLayout>
@@ -122,11 +122,11 @@
                         android:layout_marginLeft="10dp">
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace2"
                             android:id="@+id/button2"
-                            android:background="#00ffffff"
+                            android:background="#ddd"
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
@@ -162,11 +162,11 @@
                         android:layout_marginLeft="10dp" >
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace3"
                             android:id="@+id/button3"
-                            android:background="#00ffffff"
+                            android:background="#ddd"
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
@@ -215,11 +215,11 @@
                         android:layout_marginLeft="10dp">
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace4"
                             android:id="@+id/button4"
-                            android:background="#00ffffff"
+                            android:background="#ddd"
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical" />
 
@@ -254,11 +254,11 @@
                         android:layout_marginLeft="10dp">
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace5"
                             android:id="@+id/button5"
-                            android:background="#00ffffff"
+                            android:background="#ddd"
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
@@ -289,19 +289,23 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.05"
-                        android:layout_marginLeft="10dp" >
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="30dp" >
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/enlace6"
                             android:id="@+id/button6"
-                            android:background="#00ffffff"
-                            android:textSize="20sp"
-                            android:layout_marginBottom="30dp"/>
+                            android:background="#ddd"
+                            android:textSize="20sp"/>
                     </LinearLayout>
+
                 </LinearLayout>
 
+                <Space
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
 
             </LinearLayout>
 

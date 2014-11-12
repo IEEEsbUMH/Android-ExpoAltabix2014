@@ -116,12 +116,12 @@ public class SplashScreen extends Activity {
         timer.schedule(taskambiaolafrase4, triggerTime[3]);
 
         // Termina cuando acaban todos los mensajes de loading
-//        timer.schedule(task,triggerTime[4]);
+        timer.schedule(task,triggerTime[4]);
 
         // EVITAR ESTO: tras eliminar dependencia entre listaFrases y listaTiempos, ya no tiene sentido
 //        timer.schedule(task,triggerTime[triggerTime.length-1]);
 
-        timer.schedule(task,2000);    // tiempo fijo forzado manualmente
+//        timer.schedule(task,2000);    // tiempo fijo forzado manualmente
 
     }
 

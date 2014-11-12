@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ public class juego extends Activity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class juego extends Activity {
         fragmentTransaction.commit();
 
     }
+
 
     public static class Salida extends Fragment{
         View v;
@@ -65,8 +68,14 @@ public class juego extends Activity {
             exit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
+                    Toast.makeText(v.getContext(), "¡VIDA IEEEXTRA!", Toast.LENGTH_SHORT).show();
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    Botones hello = new Botones();
+                    fragmentTransaction.replace(R.id.juego, hello);
+                    fragmentTransaction.commit();
+//                    android.os.Process.killProcess(android.os.Process.myPid());
+//                    System.exit(1);
                 }
             });
 
@@ -121,8 +130,14 @@ public class juego extends Activity {
             exit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
+                    Toast.makeText(v.getContext(), "¡VIDA IEEEXTRA!", Toast.LENGTH_SHORT).show();
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    Botones hello = new Botones();
+                    fragmentTransaction.replace(R.id.juego, hello);
+                    fragmentTransaction.commit();
+//                    android.os.Process.killProcess(android.os.Process.myPid());
+//                    System.exit(1);
 
                 }
             });
@@ -161,7 +176,6 @@ public class juego extends Activity {
 
             fragmentTransaction.replace(R.id.juego,hello);
             fragmentTransaction.commit();
-
 
 
 

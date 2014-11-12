@@ -88,7 +88,7 @@ Por otra parte, referente a la comunicación llevamos a las redes sociales la ra
 
     <!--Empiezan las strings del layout Acerca de-->
     <string name="encabezado3"><b><k>Acerca de</k></b></string>
-    <string name="textoAD">¿Qué mérito tiene este proyecto? Hemos conseguido crear una aplicación android desde 0, aprendiendo de forma autodidacta y trabajando en equipo para conseguir equilibrar la falta de conocimientos con esfuerzo e ilusión. \n\nEste es el grupo de creadores de la app:</string>
+    <string name="textoAD">¿Qué mérito tiene este proyecto? \nHemos conseguido crear una aplicación android desde 0, aprendiendo de forma autodidacta y trabajando en equipo para conseguir equilibrar la falta de conocimientos con esfuerzo e ilusión. \n\nEste es el grupo de creadores de la app:</string>
 
     <string name="nombre1">Javier Andrés \'Light\'</string>
     <string name="frase1">Podemos usar DropBox para \n control de versiones\n</string>
@@ -97,8 +97,8 @@ Por otra parte, referente a la comunicación llevamos a las redes sociales la ra
     <string name="nombre2">Alba Guerra</string>
     <string name="frase2">Creadora de contenidos no visibles por\n destrucción.\n</string>
 
-    <string name="nombre3">Kudo</string>
-    <string name="frase3">¿Sabéis que esta semana he visto amanecer 2 veces\nentre archivos java?\n</string>
+    <string name="nombre3">David Jareño \'Kudo\'</string>
+    <string name="frase3">¿Sabéis que esta semana he visto amanecer 3 veces\nentre archivos java?\n</string>
 
     <string name="nombre4">José Vicente García</string>
     <string name="frase4">¿Qué he tocado ahora?\n\n</string>

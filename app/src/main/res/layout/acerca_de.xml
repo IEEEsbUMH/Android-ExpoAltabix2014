@@ -34,7 +34,7 @@
                 android:text="@string/textoAD"
                 android:id="@+id/textView2"
 
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:layout_marginBottom="20dp"/>
 
             <LinearLayout
@@ -69,6 +69,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre1"
                         android:id="@+id/textView3"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -117,7 +118,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre2"
                         android:id="@+id/textView5"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -164,7 +165,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre3"
                         android:id="@+id/textView7"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -211,7 +212,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre4"
                         android:id="@+id/textView9"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -258,7 +259,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre5"
                         android:id="@+id/textView11"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -305,7 +306,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre6"
                         android:id="@+id/textView13"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
@@ -353,7 +354,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nombre7"
                         android:id="@+id/textView15"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:textStyle="bold" />
 
                     <TextView
