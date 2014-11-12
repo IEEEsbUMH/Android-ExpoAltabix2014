@@ -38,7 +38,7 @@ public class juego extends Activity {
 
     }
 
-    public class Salida extends Fragment{
+    public static class Salida extends Fragment{
         View v;
 
         @Override
@@ -75,7 +75,7 @@ public class juego extends Activity {
 
     }
 
-    public class Ganador extends Fragment{
+    public static class Ganador extends Fragment{
         View v;
 
         @Override
@@ -83,7 +83,7 @@ public class juego extends Activity {
                                  Bundle savedInstanceState){
 
 
-            setContentView(R.layout.win);
+//            setContentView(R.layout.win);
 
             final View rootView = inflater.inflate(R.layout.win, container, false);
             v=rootView;
@@ -95,11 +95,17 @@ public class juego extends Activity {
 
             final long yourScore = getArguments().getLong("lastScore", 136631);  // 136631 default
 //            textScore.setText(Long.toString(yourScore));
-            Toast.makeText(v.getContext(), Long.toString(yourScore),Toast.LENGTH_LONG).show();
-            String tutex = "FOKKER";
-            TextView scoreText = (TextView) v.findViewById(R.id.puntuacion);
-            scoreText.setText(tutex);
+            Toast.makeText(v.getContext(), "Tu puntuación ha sido: " + Long.toString(yourScore),Toast.LENGTH_LONG).show();
 
+/*
+            runOnUiThread(new Thread(new Runnable() {
+                public void run() {
+                    String tutex = "FOKKER";
+                    TextView scoreText = (TextView) rootView.findViewById(R.id.puntos);
+                    scoreText.setText(tutex);
+            }
+            }));
+*/
 
             retry.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -128,7 +134,7 @@ public class juego extends Activity {
     }
 
 
-    public class Botones extends Fragment{
+    public static class Botones extends Fragment{
 
         final int[] orden = new int[8];
         int turno = 0;
@@ -177,12 +183,12 @@ public class juego extends Activity {
             final Button button6 = (Button)rootView.findViewById(R.id.button6);
             final Button button7 = (Button)rootView.findViewById(R.id.button7);
             final Button button8 = (Button)rootView.findViewById(R.id.button8);
-<<<<<<< HEAD
+
 //            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-=======
-            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-            final String almacen="nuevo score flipante";
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+
+//            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+//            final String almacen="nuevo score flipante";
+
 
 
             hacerOrden();
@@ -452,13 +458,12 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
 
                               ganador(score);
-=======
-                            String almacen=String.valueOf(score);
-                              ganador();
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+
+//                            String almacen=String.valueOf(score);
+//                              ganador();
+
                         }
                     }
                     else {
@@ -476,15 +481,14 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                            // scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-=======
-                            String almacen=String.valueOf(score);
-                            ganador();
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+
+//                            String almacen=String.valueOf(score);
+//                            ganador();
+
                         }
                     }
                     else {
@@ -502,15 +506,12 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                             //scoreText.setText("lo has conseguidoooo");
-                            salir();
-=======
-                            String almacen=String.valueOf(score);
-                            ganador();
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+                            ganador(score);
+//                            String almacen=String.valueOf(score);
+//                            ganador();
                         }
                     }
                     else {
@@ -533,7 +534,7 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
                             String almacen=String.valueOf(score);
-                            ganador();
+                            ganador(score);
                         }
                     }
                     else {
@@ -550,15 +551,12 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                           //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-=======
-                            String almacen=String.valueOf(score);
-                            ganador();
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+//                            String almacen=String.valueOf(score);
+//                            ganador();
                         }
                     }
                     else {
@@ -575,12 +573,10 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                            // scoreText.setText("lo has conseguidoooo");
-=======
-                            String almacen=String.valueOf(score);
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+
+//                            String almacen=String.valueOf(score);
 
                             ganador(score);
                         }
@@ -599,14 +595,13 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-<<<<<<< HEAD
+
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                           //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-=======
-                            String almacen=String.valueOf(score);
-                            ganador();
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+
+//                             String almacen=String.valueOf(score);
+//                            ganador();
                         }
                     }
                     else {

@@ -6,8 +6,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,29 +26,28 @@
             android:gravity="center"
             android:layout_weight="0.5"
             android:layout_marginRight="20dp"
-            android:text="¡Enhorabuena! Tu puntuación es:"
+            android:text="¡Enhorabuena! Tu rango es:"
             />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textAppearance="@style/AppTheme"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.5"
-                android:layout_marginRight="20dp"
-                android:textColor="#002586"
-                android:id="@+id/puntuacion"
-                android:text="NOT FALSE"
-                android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/AppTheme"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.5"
+            android:layout_marginRight="20dp"
+            android:textColor="#002586"
+            android:text="¡Eres un fIEEEra!"
+            android:layout_marginBottom="20dp"/>
         </LinearLayout>
 
-<<<<<<< HEAD
-        <TextView
+
+<!--        <TextView
             android:text="@+id/puntuacion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,46 +59,47 @@
             android:gravity="center"
             android:layout_marginRight="20dp"
            android:layout_weight="0.5"/>
-    </LinearLayout>
-=======
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
+    </LinearLayout>-->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
         android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.5">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vuelve a intentarlo"
-        android:gravity="center"
-        android:layout_marginLeft="30dp"
-        android:id="@+id/button"
-        android:layout_gravity="center_vertical"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vuelve a intentarlo"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/button"
+            android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.5">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:text="Me rindo, quiero salir"
+            android:layout_weight="0.5"
+            android:id="@+id/button2"
+            android:layout_gravity="center_vertical"/>
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.5">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_marginRight="30dp"
-        android:layout_height="wrap_content"
-        android:text="Me rindo, quiero salir"
-        android:layout_weight="0.5"
-        android:id="@+id/button2"
-        android:layout_gravity="center_vertical"/>
 
-    </LinearLayout>
-    </LinearLayout>
     </LinearLayout>
 </LinearLayout>
