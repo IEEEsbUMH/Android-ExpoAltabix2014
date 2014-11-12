@@ -22,7 +22,7 @@ public class juego extends Activity {
 
     TextView tiempo;
     int h=0,m=0,s=0;
-    long variableScoreAlmacen=0;
+
 
 
     @Override
@@ -100,6 +100,7 @@ public class juego extends Activity {
             TextView scoreText = (TextView) v.findViewById(R.id.puntuacion);
             scoreText.setText(tutex);
 
+
             retry.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -116,6 +117,7 @@ public class juego extends Activity {
                 public void onClick(View v) {
                     android.os.Process.killProcess(android.os.Process.myPid());
                     System.exit(1);
+
                 }
             });
 
@@ -156,6 +158,7 @@ public class juego extends Activity {
 
 
 
+
         }
 
         @Override
@@ -174,7 +177,12 @@ public class juego extends Activity {
             final Button button6 = (Button)rootView.findViewById(R.id.button6);
             final Button button7 = (Button)rootView.findViewById(R.id.button7);
             final Button button8 = (Button)rootView.findViewById(R.id.button8);
+<<<<<<< HEAD
 //            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+=======
+            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+            final String almacen="nuevo score flipante";
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
 
 
             hacerOrden();
@@ -444,8 +452,13 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 
                               ganador(score);
+=======
+                            String almacen=String.valueOf(score);
+                              ganador();
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
                         }
                     }
                     else {
@@ -463,10 +476,15 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                            // scoreText.setText("lo has conseguidoooo");
                             ganador(score);
+=======
+                            String almacen=String.valueOf(score);
+                            ganador();
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
                         }
                     }
                     else {
@@ -484,16 +502,25 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                             //scoreText.setText("lo has conseguidoooo");
                             salir();
+=======
+                            String almacen=String.valueOf(score);
+                            ganador();
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
                         }
                     }
                     else {
                         salir();
+
                     }
+
+
                 }
+
             });
 
             button5.setOnClickListener(new View.OnClickListener() {
@@ -505,10 +532,8 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-
-
-                           // scoreText.setText("lo has conseguidoooo");
-                            salir();
+                            String almacen=String.valueOf(score);
+                            ganador();
                         }
                     }
                     else {
@@ -525,10 +550,15 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                           //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
+=======
+                            String almacen=String.valueOf(score);
+                            ganador();
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
                         }
                     }
                     else {
@@ -545,8 +575,12 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                            // scoreText.setText("lo has conseguidoooo");
+=======
+                            String almacen=String.valueOf(score);
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
 
                             ganador(score);
                         }
@@ -565,9 +599,14 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+<<<<<<< HEAD
 //                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
                           //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
+=======
+                            String almacen=String.valueOf(score);
+                            ganador();
+>>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
                         }
                     }
                     else {

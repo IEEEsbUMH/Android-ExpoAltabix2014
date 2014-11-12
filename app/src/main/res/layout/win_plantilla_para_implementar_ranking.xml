@@ -46,23 +46,44 @@
                 android:text="NOT FALSE"
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
 
-<<<<<<< HEAD
+
+
         <TextView
-            android:text="@+id/puntuacion"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAppearance="@style/AppTheme"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_marginTop="50dp"
+
             android:layout_marginLeft="20dp"
             android:gravity="center"
             android:layout_marginRight="20dp"
-           android:layout_weight="0.5"/>
+            android:text="Introduce tu nombre para pasar a la posteridad"
+            android:layout_weight="0.33"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text=""/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+
+                android:id="@+id/boton_guardar"
+                android:layout_gravity="center_horizontal"/>
+
     </LinearLayout>
-=======
->>>>>>> 5220dbe79efcbb486e5c6085f8d9e5e42d5e2247
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
