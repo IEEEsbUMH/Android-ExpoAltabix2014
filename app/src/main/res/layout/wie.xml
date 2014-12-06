@@ -36,10 +36,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:layout_marginTop="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ANDROID Y JAVA"
+        android:text="WOMEN IN ENGINEERING"
+        android:textStyle="bold"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
@@ -57,8 +57,11 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:scaleType="center"
                 android:id="@+id/imageView"
-                android:background="@drawable/android_foto"
+
+                android:src="@drawable/wie"
+
                 android:layout_centerHorizontal="true" />
 
 
@@ -66,7 +69,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Este grupo de trabajo se plantea como medio de iniciación para los curiosos que quieran desarrollar en Android y Java y como herramienta para la cooperación y el asesoramiento de los proyectos personales sobre esta plataforma."
+                android:text="Aunque el WIE no sea un grupo de trabajo, lo incluimos en esta sección.\n\n Técnicamente se trata de un Affinity Group vinculado a la mayor organización internacional dedicada a apoyar a las mujeres ingenieras y científicas. Además, tiene como objetivo inspirar a niñas de todo el mundo a seguir sus intereses académicos en las carreras del ámbito técnico-científico y que así puedan cumplir sus sueños.\n\n
+
+A pesar de que el Wie sea una corporación para la contratación y retención de mujeres en dichas disciplinas, también esta formada por hombres que colaboran y ayudan a que la igualdad en las ingenierías sea posible."
                 android:id="@+id/textView2"
                 android:layout_gravity="center_horizontal"
                 android:layout_below="@+id/imageView"
@@ -82,7 +87,6 @@
                 android:id="@+id/textView3"
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="40dp"
-                android:layout_marginBottom="40dp"
                 android:layout_marginRight="40dp" />
 
         </RelativeLayout>

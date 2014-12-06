@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
@@ -18,7 +19,7 @@ import java.util.TimerTask;
 public class SplashScreen extends Activity {
 
     // Constante para especificar la duración de la Splash Screen
-    private static final long SPLASH_SCREEN_DELAY = 2000; //tiempo en milisegundos (6000ms=6s)
+    //private static final long SPLASH_SCREEN_DELAY = 2000; //tiempo en milisegundos (6000ms=6s)
 
 
     @Override
@@ -26,47 +27,56 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen); //La vista se asigna a splash_screen.xml
 
-        // instanciamos cargando
+        // instanciamos cargando para obtener las frases
         final Cargando loading = new Cargando();
 
-        // Elegimos una frase aleatoria cada vez que iniciamos
+        // Generamos un valor aleatorio como frase inicial
         Random rnd = new Random();
         int randNum = rnd.nextInt(loading.listaFrases.length);
 
+        // Recuperamos arrays aleatorizados de frases y tiempos, y gestionar localmente
+        final String[] frasesCargando = loading.getFrasesCargando(randNum);
+        final int[] tiemposCargando = loading.getTiemposCargando(randNum);
+
+
+        // Definimos el texto del layout, y le damos valor inicial
         TextView tv = (TextView) findViewById(R.id.textocargando);  // el texto variable
-        String text = loading.setFraseCargando(randNum);  // frase inicial
+        String text = frasesCargando[4];  // frase inicial (aleatoria)
         tv.setText(text);
 
 
-/*        // Todas las task para varios cambios de frase consecutivos
-        TimerTask taskambiaolafrase1 = new TimerTask() { //Creación de un objeto TimerTask
+        // Todas las task para varios cambios de frase consecutivos.
+        // Los timertask corren sobre otros hilos, por tanto, necesitamos llamar a 'runThread()'
+        // para que ejecute el cambio de texto en el hilo principal (el que creó ese TextView)
+
+        TimerTask taskambiaolafrase1 = new TimerTask() {
             @Override
             public void run() {
-                runThread(1);
+                runThread(frasesCargando[1]);
             }
         };
-        TimerTask taskambiaolafrase2 = new TimerTask() { //Creación de un objeto TimerTask
+        TimerTask taskambiaolafrase2 = new TimerTask() {
             @Override
             public void run() {
-                runThread(2);
+                runThread(frasesCargando[2]);
             }
         };
-        TimerTask taskambiaolafrase3 = new TimerTask() { //Creación de un objeto TimerTask
+        TimerTask taskambiaolafrase3 = new TimerTask() {
             @Override
             public void run() {
-                runThread(3);
+                runThread(frasesCargando[3]);
             }
         };
-        TimerTask taskambiaolafrase4 = new TimerTask() { //Creación de un objeto TimerTask
+        TimerTask taskambiaolafrase4 = new TimerTask() {
             @Override
             public void run() {
-                runThread(4);
+                runThread(frasesCargando[4]);
             }
-        };*/
+        };
 
 
 
-        // CIERRE SPLASH TRAS TIMER 6 SEG
+        // CIERRE SPLASH TRAS FINALIZAR TODAS LAS FRASES
          TimerTask task = new TimerTask() { //Creación de un objeto TimerTask
             @Override
             public void run() {
@@ -83,46 +93,53 @@ public class SplashScreen extends Activity {
         };
 
 
-         // CAPADO POR NECESIDAD VITAL xD [kudo]
-/*        // Creamos array de tiempos de duracion de cada frase
-        int[] triggerTime = new int[loading.listaTiempos.length]; // preparamos array de tiempos
+        // Creamos array de tiempos de disparo para cada task del timer
+        int[] triggerTime = new int[tiemposCargando.length];
 
-        // cada tiempo indicará el momento del trigger para cada task
-        triggerTime[0] = loading.listaTiempos[0];     //el primer tiempo lo añadimos fuera del for
+        // Cada valor de tiempo indicará el momento del timer en que se lanzará cada task
+        // (el primer valor lo añadimos fuera del for, por ser valor directo, no acumulativo)
+        triggerTime[0] = tiemposCargando[0];
+        int suma = tiemposCargando[0];  // test kudo
         for (int i = 1; i < triggerTime.length; i++) {
-            triggerTime[i] = triggerTime[i-1] + loading.listaTiempos[i];
-        }*/
+            triggerTime[i] = triggerTime[i-1] + tiemposCargando[i];
+            suma = suma + tiemposCargando[i];  //test kudo
+        }
 
 
         // INICIAMOS TIMER
         Timer timer = new Timer();
 
-/*        // Todas las frases cada vez era innecesario... pero lo dejo por si acaso!
+        // Todas las frases cada vez era innecesario... pero lo dejo por si acaso!
         timer.schedule(taskambiaolafrase1, triggerTime[0]);
         timer.schedule(taskambiaolafrase2, triggerTime[1]);
         timer.schedule(taskambiaolafrase3, triggerTime[2]);
-        timer.schedule(taskambiaolafrase4, triggerTime[3]);*/
-
-        timer.schedule(task, loading.listaTiempos[randNum]);
+        timer.schedule(taskambiaolafrase4, triggerTime[3]);
 
         // Termina cuando acaban todos los mensajes de loading
+        timer.schedule(task,triggerTime[4]);
+
+
+        // EVITAR ESTO: tras eliminar dependencia entre listaFrases y listaTiempos, ya no tiene sentido
 //        timer.schedule(task,triggerTime[triggerTime.length-1]);
-//        timer.schedule(task,SPLASH_SCREEN_DELAY);
+
+//        timer.schedule(task,1000);    // tiempo fijo forzado manualmente
 
     }
 
 
 
-    private void runThread(final int i) {
+    private void runThread(final String text) {
         runOnUiThread(new Thread(new Runnable() {
             public void run() {
                 TextView tv = (TextView) findViewById(R.id.textocargando);
-                final Cargando loading = new Cargando();
-                String text = loading.setFraseCargando(i);
                 tv.setText(text);
 
             }
         }));
     }
 
+
 }
+
+//Toast.makeText(getApplicationContext(), "randNum=" + randNum + " y listaFrases.length+1=" + (loading.listaFrases.length+1), Toast.LENGTH_LONG).show();
+//Toast.makeText(getApplicationContext(), tiemposCargando.length + " - " + triggerTime.length + " final" + triggerTime[triggerTime.length-1] + " suma" + suma, Toast.LENGTH_LONG).show();

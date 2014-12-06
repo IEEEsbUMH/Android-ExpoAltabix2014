@@ -37,6 +37,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_marginTop="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="VIDEOJUEGOS"
@@ -47,30 +48,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
+        android:layout_marginBottom="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:layout_gravity="center_horizontal">
 
-<!--
-            <ImageView
+     <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView"
                 android:background="@drawable/videojuegos"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="40dp"></ImageView>
--->
+                android:layout_centerHorizontal="true"
+                ></ImageView>
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Desde el grupo de Desarrollo de Videojuegos se pretende aprender a manejar y generar los elementos que componen los videojuegos, explorar diferentes motores de desarrollo para diferentes plataformas y diferenciar las ventajas y desventajas de cada uno, iniciar a los miembros en la programación orientada a objetos de una forma gráfica y profundizar en el concepto de videojuego explotando la libertad que este concepto contiene."
+                android:text="Desde el grupo de Desarrollo de Videojuegos se pretende aprender a manejar y generar los elementos que componen los videojuegos, explorar diferentes motores de desarrollo para diferentes plataformas y diferenciar las ventajas y desventajas de cada uno.\n\n Además, se pretende iniciar a los miembros en la programación orientada a objetos de una forma gráfica y profundizar en el concepto de videojuego explotando la libertad que este concepto contiene."
                 android:id="@+id/textView2"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
@@ -81,14 +82,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="– Promover el trabajo en equipo y la coordinación del mismo.
-– Aprender acerca de herramientas informáticas de coordinación y de control de versiones.
-– Desarrollar una filosofía referente al desarrollo de juegos gratuitos de cara a el usuario final.
+                android:text="– Promover el trabajo en equipo y la coordinación del mismo.\n
+– Aprender acerca de herramientas informáticas de coordinación y de control de versiones.\n
+– Desarrollar una filosofía referente al desarrollo de juegos gratuitos de cara a el usuario final.\n
 – Investigar las responsabilidades y funciones de un estudio de desarrollo de videojuegos."
                 android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/textView2"
+                android:layout_marginBottom="80dp"
                 android:layout_marginLeft="40dp"/>
 
         </RelativeLayout>

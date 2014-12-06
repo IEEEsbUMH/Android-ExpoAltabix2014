@@ -141,7 +141,8 @@ public class Main extends Activity {
 
             default:
                 //Si la opción no está disponible aparecerá un Toast y nos envía a Inicio.
-                Toast.makeText(getApplicationContext(), "Opcion " + titulos[position - 1] + " no disponible", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "¡FIEEESTA!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Opcion " + titulos[position - 1] + " no disponible", Toast.LENGTH_SHORT).show();
                 fragment = new Fragment_Inicio();
                 position = 1;
                 break;
