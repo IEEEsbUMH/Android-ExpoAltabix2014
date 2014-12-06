@@ -84,6 +84,22 @@
         android:layout_toRightOf="@+id/button7"
         android:layout_toEndOf="@+id/button7" />
 
+    <!--Botón WIN para acceder a win.xml, para activar, descomentar aqui y en juego.java (su lógica) -->
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WIN"
+        android:id="@+id/buttonwin"
+        android:layout_below="@+id/button4"
+        android:layout_toRightOf="@+id/button7"
+        android:layout_toEndOf="@+id/button7"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"/>
+-->
+
 
 
 </RelativeLayout>

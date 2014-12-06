@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -18,13 +17,30 @@ import android.widget.Toast;
 import java.util.Random;
 
 
+/**
+ * KUDO:        ATENCIÓN!!
+ *
+ *  Se les ha eliminado la condición de STATIC a todos los fragment para que funcione la puntuación.
+ *  Esto puede resultar problemático si se necesita hacer uso de algún comportamiento NonStatic,
+ *  tal y como se definen los Fragment. En caso contrario, debe funcionar perfectamente.
+ *
+ *              INFO SOBRE BOTON   WIN
+ *
+ * Hemos implementado un 9º botón en el juego para acceder directamente a la pantalla win.xml,
+ * sin tener que sufrir las desafiantes vicisitudes del destino, cada vez que pulsas mal xD
+ *
+ * Este botón sólo se activa para debuggear (por ejemplo, implementación del ranking).
+ * Para activarlo, descomentar los bloques relacionados con "buttonwin" en:
+ *      - Declaración botón: al principio de onCreateView en el Fragment Botones
+ *      - Lógica del botón: bloque "buttonwin.setOnClickListener", final de onCreateView en Botones
+ *      - Layout del botón: interfaz visual en archivo de Layout "buttons.xml"
+ */
+
 public class juego extends Activity {
 
 
     TextView tiempo;
     int h=0,m=0,s=0;
-
-
 
 
     @Override
@@ -35,13 +51,13 @@ public class juego extends Activity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Botones hello = new Botones();
-        fragmentTransaction.replace(R.id.juego, hello);
+        fragmentTransaction.add(R.id.juego, hello);
         fragmentTransaction.commit();
 
     }
 
 
-    public static class Salida extends Fragment{
+    public class Salida extends Fragment{
         View v;
 
         @Override
@@ -84,7 +100,7 @@ public class juego extends Activity {
 
     }
 
-    public static class Ganador extends Fragment{
+    public class Ganador extends Fragment{
         View v;
 
         @Override
@@ -100,21 +116,18 @@ public class juego extends Activity {
             final Button retry = (Button)rootView.findViewById(R.id.button);
             final Button exit = (Button)rootView.findViewById(R.id.button2);
 
-//            TextView textScore = (TextView) findViewById(R.id.puntuacion);
+            // Recogemos el tiempo (en segundos) del Fragment anterior (Botones)
+            final float score = (float)getArguments().getLong("lastScore", 999999) /1000; // 999.999 default
+            String strScore = Float.toString(score);
 
-            final long yourScore = getArguments().getLong("lastScore", 136631);  // 136631 default
-//            textScore.setText(Long.toString(yourScore));
-            Toast.makeText(v.getContext(), "Tu puntuación ha sido: " + Long.toString(yourScore),Toast.LENGTH_LONG).show();
+            // TOAST para mostrar puntuación
+            Toast.makeText(v.getContext(), "Tu puntuación ha sido: " + strScore,Toast.LENGTH_LONG).show();
 
-/*
-            runOnUiThread(new Thread(new Runnable() {
-                public void run() {
-                    String tutex = "FOKKER";
-                    TextView scoreText = (TextView) rootView.findViewById(R.id.puntos);
-                    scoreText.setText(tutex);
-            }
-            }));
-*/
+
+            TextView textScore = (TextView)rootView.findViewById(R.id.puntuacion);
+            textScore.setText(strScore + " seg.");
+
+
 
             retry.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -136,7 +149,7 @@ public class juego extends Activity {
                     Botones hello = new Botones();
                     fragmentTransaction.replace(R.id.juego, hello);
                     fragmentTransaction.commit();
-//                    android.os.Process.killProcess(android.os.Process.myPid());
+//                    android.os.Process.killProcess(android.os.Process.myPid());   // no funciona
 //                    System.exit(1);
 
                 }
@@ -149,7 +162,7 @@ public class juego extends Activity {
     }
 
 
-    public static class Botones extends Fragment{
+    public class Botones extends Fragment{
 
         final int[] orden = new int[8];
         int turno = 0;
@@ -198,10 +211,10 @@ public class juego extends Activity {
             final Button button7 = (Button)rootView.findViewById(R.id.button7);
             final Button button8 = (Button)rootView.findViewById(R.id.button8);
 
-//            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
+            // Declaracion del boton WIN (descomentar aquí, abajo y en buttons.xml)
+//            final Button buttonwin = (Button)rootView.findViewById(R.id.buttonwin);
 
-//            final TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-//            final String almacen="nuevo score flipante";
+
 
 
 
@@ -451,8 +464,6 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
 
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                            //scoreText.setText("lo has conseguidoooo");
                             ganador(score);
                         }
                     }
@@ -475,9 +486,6 @@ public class juego extends Activity {
 
                               ganador(score);
 
-//                            String almacen=String.valueOf(score);
-//                              ganador();
-
                         }
                     }
                     else {
@@ -496,12 +504,7 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
 
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                           // scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-
-//                            String almacen=String.valueOf(score);
-//                            ganador();
 
                         }
                     }
@@ -521,11 +524,8 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
 
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                            //scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-//                            String almacen=String.valueOf(score);
-//                            ganador();
+
                         }
                     }
                     else {
@@ -547,7 +547,7 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-                            String almacen=String.valueOf(score);
+
                             ganador(score);
                         }
                     }
@@ -566,11 +566,8 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
 
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                          //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
-//                            String almacen=String.valueOf(score);
-//                            ganador();
+
                         }
                     }
                     else {
@@ -587,10 +584,6 @@ public class juego extends Activity {
                         if(turno == 8){
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                           // scoreText.setText("lo has conseguidoooo");
-
-//                            String almacen=String.valueOf(score);
 
                             ganador(score);
                         }
@@ -610,12 +603,8 @@ public class juego extends Activity {
                             myChronometer.stop();
                             long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
 
-//                            TextView scoreText= (TextView)rootView.findViewById(R.id.puntuacion);
-                          //  scoreText.setText("lo has conseguidoooo");
                             ganador(score);
 
-//                             String almacen=String.valueOf(score);
-//                            ganador();
                         }
                     }
                     else {
@@ -623,6 +612,17 @@ public class juego extends Activity {
                     }
                 }
             });
+
+
+/*          // Lógica del boton WIN  (descomentar aquí, arriba y en buttons.xml)
+            buttonwin.setOnClickListener(new View.OnClickListener() {     //Test Ranking
+                @Override
+                public void onClick(View v) {
+                    myChronometer.stop();
+                    long score = SystemClock.elapsedRealtime() - myChronometer.getBase();
+                    ganador(score);
+                }
+            });*/
 
             return rootView;
         }

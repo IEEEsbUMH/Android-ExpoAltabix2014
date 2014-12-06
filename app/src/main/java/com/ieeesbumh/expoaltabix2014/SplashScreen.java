@@ -118,10 +118,11 @@ public class SplashScreen extends Activity {
         // Termina cuando acaban todos los mensajes de loading
         timer.schedule(task,triggerTime[4]);
 
+
         // EVITAR ESTO: tras eliminar dependencia entre listaFrases y listaTiempos, ya no tiene sentido
 //        timer.schedule(task,triggerTime[triggerTime.length-1]);
 
-//        timer.schedule(task,2000);    // tiempo fijo forzado manualmente
+//        timer.schedule(task,1000);    // tiempo fijo forzado manualmente
 
     }
 
@@ -131,8 +132,6 @@ public class SplashScreen extends Activity {
         runOnUiThread(new Thread(new Runnable() {
             public void run() {
                 TextView tv = (TextView) findViewById(R.id.textocargando);
-//                final Cargando loading = new Cargando();
-//                String text = frasesCargando[i];
                 tv.setText(text);
 
             }
